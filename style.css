@@ -247,7 +247,7 @@ header{
     padding: 40px 40px;
     gap: 50px;
     vertical-align: baseline;
-    margin: 0px 200px;
+    margin: 0 200px;
     box-sizing: inherit;
 }
 .main-section-text{
@@ -555,25 +555,32 @@ button.migration-button:active {
     cursor: pointer;
   }
 }
-
+footer{
+    background-color: var(--background-color-footer);
+}
 
 /*Pie de Pagina (footer)*/
 .footer-top {
+  display: block;
+  align-items: center;
   background-color: var(--background-color-footer);
-  padding: 30px 20px;
+  padding: 30px 9px;
+  margin: 0 auto;
   width: 100%;
 }
 
 .footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0 55px;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 50px;
+  justify-content: space-between;
 }
 
 /* Primera fila: logo + medios de pago + redes sociales */
-.navigation-logo {
+.navigation-logo, .social-icons, .payments {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -599,7 +606,7 @@ button.migration-button:active {
     font-size: 16px;
     color: var(--neutral-section-600);
     border-radius: 8px;
-    justify-content: center;
+    justify-content: end;
     align-items: start;
     cursor: pointer;
     
@@ -614,36 +621,48 @@ button.migration-button:active {
 .payment-icons {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 10px;
+  align-items: start;
+  gap: 3px;
   flex-wrap: wrap;
-  max-width: 1250px;
+  max-width: 100%;
   margin-bottom: 24px;
 }
+.payment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+    margin-bottom: 24px;
 
-.payments .payment-icons img{
-  border-radius: 15%;
-  border: 1px solid var(--border--footer);
-  width: 60px;
-  height: auto;
+}
+
+.payments a {
+    font-size: 14px;
+    color: var(--link-color);
+    margin-left: 8px;
+}
+
+.payment-icons img{
+    display: block;
+    border-radius: 15%;
+    border: 1px solid var(--border--footer);
+    width: 60px;
+    height: auto;
 }
 
 .payment-icons a {
-  font-size: 14px;
-  color: var(--neutral-card-icon-600);
-  font-weight: 600;
-  margin-left: 8px;
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-left: 8px;
 }
 
 /* Links legales */
-.footer-top {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-}
 .footer-bottom a {
+    display: flex;
+    justify-content: end;
+    gap: 5px;
     font-size: 14px;
     font-weight: 300;
     text-decoration: none;
@@ -668,6 +687,7 @@ button.migration-button:active {
 }
 /* Contenedor sticky*/
 .ask-kodde-wrapper{
+    background-color: var(--background-color-footer);
     position: sticky;
     bottom: 20px;
     display: flex;
