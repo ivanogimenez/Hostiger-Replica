@@ -10,24 +10,23 @@
     --neutral--600:#1d1e20;
     --primary-color: #673de6;
     --btn-color-hover: #4820c0;
+    --neutral-section-card-200: #301c6b;
+    --background-color-btn-primary-hover: #582ed9;
     --button-color: white;
     --link-color: #161718;
     --link-hover-color: hsl(0, 0%, 4%);
     --link-hover-color2: #d4d4d4;
-    --color-text: #fff;
     --navbar--hover-color:#b8b8ba;
+    --background-color-footer: #f5f6ff;
     --background-color-scroll: #777777;
     --background-color-scroll2: #494949;
-    --background-color-btn-primary-hover: #582ed9;
     --primary-color-ckeck:#00b090;
     --neutral-section-600: #1e1f21;
-    --neutral-section-card-200: #301c6b;
     --neutral-card-icon-600: #673de6;
     --background-color: #fff;
-    --background-color-footer: #f5f6ff;
     --border--footer: #d6e0ff;
-
 }
+
 html{
     font-size: 100%;
     scroll-behavior: smooth;
@@ -58,41 +57,7 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #462b96, #2d1f66);
 }
-/* Contenedor sticky*/
-.ask-kodde-wrapper{
-    position: sticky;
-    bottom: 20px;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
-}
-.ask-kodde-btn{
-    background-color: var(--primary-color);
-    color: var(--color-text);
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: background-color 0.3s ease;
-}
 
-.ask-kodde-btn:hover{
-    background-color: var(--neutral-section-card-200);
-    transform:scale(1.05);
-}
-.kodde-icon{
-    color: var(--border--footer);
-    gap: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}.kodde-icon:hover{
-    color: var(--color-text);
-    transform:scale(1.05);
-}
 
 /*NavBar*/
 a {
@@ -118,9 +83,10 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%; 
-    height: 70px;   
-    padding: 20px 0 29px 40px;
+    width: 100%;
+    max-height: 88px;
+    min-height: 88px;
+    padding: 20px 40px 20px 40px;
     background-color: var(--color-text);
     position: sticky;
     z-index: 9999;
@@ -168,7 +134,6 @@ header{
 .left-section {
     display: flex;
     align-items: center;
-    gap: 40px;
 }
 .right-section {
     display: flex;
@@ -273,28 +238,26 @@ header{
     padding: 36px 0 96px;
     width: 92%;
 }
-
 .main-section{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    width: 1050px;
-    padding: 20px 20px;
-    gap: 29px;
-    max-width: 1050px;
+    width: 100%;
+    padding: 40px 40px;
+    gap: 50px;
     vertical-align: baseline;
-    margin: -30px auto;
+    margin: 0px 200px;
     box-sizing: inherit;
 }
 .main-section-text{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: start;
 
     max-width: 50%;
-    padding: 0px 0px 10px;
+    padding: 0px 50px;
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
@@ -339,16 +302,16 @@ span.main__list-item{
     position: relative;
 }
 .main-section-image img{
-    max-width: 100%;
+    max-width:100%;
     height: auto;
 }
 .hero-media img{
     display: flex;
-    width: 1025px;
+    width: 70%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 100%;
+    max-width: 70%;
     gap: 10px;
     flex: 1;
    
@@ -702,6 +665,41 @@ button.migration-button:active {
   gap: 40px;
 
   color: var(--link-color);
+}
+/* Contenedor sticky*/
+.ask-kodde-wrapper{
+    position: sticky;
+    bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+.ask-kodde-btn{
+    background-color: var(--primary-color);
+    color: var(--color-text);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease;
+}
+
+.ask-kodde-btn:hover{
+    background-color: var(--neutral-section-card-200);
+    transform:scale(1.05);
+}
+.kodde-icon{
+    color: var(--border--footer);
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}.kodde-icon:hover{
+    color: var(--color-text);
+    transform:scale(1.05);
 }
 
 
