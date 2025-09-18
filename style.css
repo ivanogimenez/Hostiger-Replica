@@ -79,6 +79,7 @@ ul.nav-list{
 }
 /*NavBar*/
 header{
+    background-color: var(--background-color);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -87,7 +88,6 @@ header{
     max-height: 88px;
     min-height: 88px;
     padding: 20px 40px 20px 40px;
-    background-color: var(--color-text);
     position: sticky;
     z-index: 9999;
     scrollbar-width: thin;
