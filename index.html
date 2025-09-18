@@ -10,8 +10,7 @@
 
 </head>
 
-<body>
-    
+<body class="container">
         <header>
         <div class="left-section">
             <div class="navigation-logo">
@@ -40,7 +39,8 @@
         </div> 
 
            <!-- mobile menu hamburguesa-->
-        <div class="hamburger"><i class="bi bi-list"></i></div>
+            <div class="menu-toggle"><svg data-v-c8469f04="" data-v-dc32ad0c="" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="h-svgo-icon" style="fill: var(--neutral--1000); color: var(--neutral--1000);"><path fill="currentColor" d="M3.875 4.875a1 1 0 0 1 1-1h14.25a1 1 0 1 1 0 2H4.875a1 1 0 0 1-1-1ZM3.875 12a1 1 0 0 1 1-1h14.25a1 1 0 0 1 0 2H4.875a1 1 0 0 1-1-1ZM4.875 18.125a1 1 0 1 0 0 2h14.25a1 1 0 1 0 0-2H4.875Z"></path></svg></div>
+        
         <div class="mobile-menu"><div class="close-btn"><i class="bi bi-x-lg"></i></div>
         <ul>
             <li><a href="./pages/pricing.html">Pricing</a></li>
@@ -219,8 +219,20 @@
                 </div>
         </div>
     </footer>
-    
+    /* Boton preguntale a Kodde*/
+    <div class="ask-kodde-wrapper">
+        <button class="ask-kodde-btn"> <svg data-v-411de46f="" data-v-c9232456="" class="kodde-icon" aria-hidden="true" style="color: var(--neutral--0); fill: var(--neutral--0); width: 16px; height: 16px;"><use data-v-411de46f="" href="#ic-kodee-16"></use></svg> Ask Kodde</button>
+    </div>
+</body> 
+<script>
+    const toggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('nav ul');
 
-</body>
+toggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+</script>
+
+
 
 </html>

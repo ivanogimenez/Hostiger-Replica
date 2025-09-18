@@ -9,7 +9,7 @@
 :root{
     --neutral--600:#1d1e20;
     --primary-color: #673de6;
-    --btn-color-hover: #5025d1;
+    --btn-color-hover: #4820c0;
     --button-color: white;
     --link-color: #161718;
     --link-hover-color: hsl(0, 0%, 4%);
@@ -58,6 +58,42 @@ body::-webkit-scrollbar-thumb {
 body::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #462b96, #2d1f66);
 }
+/* Contenedor sticky*/
+.ask-kodde-wrapper{
+    position: sticky;
+    bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+.ask-kodde-btn{
+    background-color: var(--primary-color);
+    color: var(--color-text);
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease;
+}
+
+.ask-kodde-btn:hover{
+    background-color: var(--neutral-section-card-200);
+    transform:scale(1.05);
+}
+.kodde-icon{
+    color: var(--border--footer);
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}.kodde-icon:hover{
+    color: var(--color-text);
+    transform:scale(1.05);
+}
+
 /*NavBar*/
 a {
     background-color: transparent;
@@ -84,14 +120,13 @@ header{
     align-items: center;
     width: 100%; 
     height: 70px;   
-    padding:20px 0 29px 40px;
+    padding: 20px 0 29px 40px;
     background-color: var(--color-text);
     position: sticky;
     z-index: 9999;
     scrollbar-width: thin;
     top: 0;
-    gap: 2
-    0px;
+    gap: 20px;
 }
 
 .navbar{
@@ -189,7 +224,7 @@ header{
 .navigation-button:hover {
     border: 1px solid var(--link-hover-color2);
     background-color: white smoke;
-    color: var(--link-hover-color);
+    color: var(--btn-hover-color);
 }
 .hamburger{
     display: none;
@@ -531,6 +566,33 @@ button.migration-button:active {
         max-width: 1208px;
     }
 */
+.menu-toggle {
+  display: none; /* oculto por defecto */
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* escondemos el menú normal en mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* ajusta según la altura de tu header */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 1rem;
+  }
+
+  nav ul.active {
+    display: flex; /* aparece cuando lo activamos con JS */
+  }
+
+  .menu-toggle {
+    display: block; /* mostramos el icono hamburguesa en mobile */
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
 
 /*Pie de Pagina (footer)*/
 .footer-top {
